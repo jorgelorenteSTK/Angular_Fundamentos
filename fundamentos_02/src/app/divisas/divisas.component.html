@@ -1,0 +1,9 @@
+<h1>Conversor de divisas:</h1>
+<p>Cantidad a convertir: <input type="number" [(ngModel)]="num"></p>
+<select [(ngModel)]="divisa" value="dolar">
+    <option value="dolar">Dólares</option>
+    <option value="libra">Libras</option>
+    <option value="yen">Yenes</option>
+</select>
+<button (click)="convertir()">Convertir</button>
+<h3>Resultado en euros: {{resultado}}</h3>
