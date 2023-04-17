@@ -1,0 +1,26 @@
+<h1>Ejemplo directivas ngIf - else // ngTemplate</h1>
+<div *ngIf="userLogged; else userOff">
+    <p>Usuario logeado: {{username}}</p>
+    <button (click)="logOut()">Cerrar sesión</button>
+</div>
+
+<ng-template #userOff>
+    <p>Inicia sesión:</p>
+    <button (click)="logIn()">Iniciar sesión</button>
+</ng-template>
+
+<h1>Ejemplo directiva ngFor</h1>
+<ul>
+    <li *ngFor="let employee of employees">
+        Name: {{employee.name}} || Salary : {{employee.salary}}
+    </li>
+</ul>
+
+<h1>Ejemplo directiva ngSwitch</h1>
+<div [ngSwitch]="movie">
+    <p *ngSwitchCase="'avatar'"> Tu película favorita es Avatar</p>
+    <p *ngSwitchCase="'avengers'"> Tu película favorita es Los Vengadores</p>
+    <p *ngSwitchCase="'titanic'"> Tu película favorita es Titanic</p>
+    <p *ngSwitchCase="'mario'"> Tu película favorita es Super Mario Bros: La película.</p>
+    <p *ngSwitchDefault> No tienes película favorita</p>
+</div>

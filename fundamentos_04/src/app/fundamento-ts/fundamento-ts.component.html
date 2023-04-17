@@ -1,0 +1,10 @@
+<h1>Ejemplo uniones de tipo:</h1>
+<p>Agrega valores al array:</p>
+<input type="number" [(ngModel)]="numberExample"><button (click)="addNumber()">Añadir número</button><br>
+<input type="text" [(ngModel)]="stringExample"><button (click)="addString()">Añadir string</button><br>
+<p>{{cad}}</p>
+<h1>Ejemplo enumeraciones:</h1>
+<select [(ngModel)]="mes">
+    <option *ngFor="let m of months" [value]="m">{{m}}</option>
+</select>
+

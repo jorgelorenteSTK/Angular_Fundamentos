@@ -1,0 +1,6 @@
+<h1>Padre médicos => Formulario</h1>
+<p>Nombre: <input type="text" [(ngModel)]="mp.nombre"></p>
+<p>Apellidos: <input type="text" [(ngModel)]="mp.apellidos"></p>
+<p>Cédula: <input type="number" [(ngModel)]="mp.cedula"></p>
+<p>Foto: <input type="text" [(ngModel)]="mp.foto"></p>
+<app-medicos-hijo [mh]="mp"></app-medicos-hijo>

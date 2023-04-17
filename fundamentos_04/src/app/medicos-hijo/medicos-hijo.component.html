@@ -1,0 +1,10 @@
+<button (click)="enviarMedico()">Enviar</button>
+<h3>Hijo médicos => Lista</h3>
+<ul>
+    <li *ngFor="let m of listaMedicos">
+        Nombre: {{m.nombre}} ||
+        Apellidos: {{m.apellidos}} ||
+        Cédula: {{m.cedula}} ||
+        Foto: {{m.foto}}
+    </li>
+</ul>
