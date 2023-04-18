@@ -1,0 +1,18 @@
+<h3>Lista de pedidos:</h3>
+<table id="tablita">
+    <tr>
+        <td>ID pedido</td>
+        <td>ID cliente</td>
+        <td>Nombre cliente</td>
+        <td>Total de productos</td>
+        <td>Importe total</td>
+    </tr>
+    <tr *ngFor="let p of lp">
+        <td>{{p.idPedido}}</td>
+        <td>{{p.idCliente}}</td>
+        <td>{{p.nombreCliente}}</td>
+        <td>{{p.total}}</td>
+        <td>{{p.importe}}</td>
+    </tr>
+</table>
+<app-pedidos-form (newItemEvent)="agregarPedido($event)"></app-pedidos-form>

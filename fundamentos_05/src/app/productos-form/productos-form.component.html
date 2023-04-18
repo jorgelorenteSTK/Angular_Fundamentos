@@ -1,0 +1,12 @@
+<h3>Añade tu producto:</h3>
+<p>Nombre : <input type="text" [(ngModel)]="nombre"></p>
+<p>Existencias : <input type="number" [(ngModel)]="existencias"></p>
+<p>Precio : <input type="number" [(ngModel)]="precio"></p>
+<p>Tipo :
+    <select [(ngModel)]="tipo">
+        <option *ngFor="let t of tipos" [value]="t">{{t}}</option>
+    </select>
+</p>
+<button (click)="enviarProducto()">Enviar</button>
+<app-productos-list [lh] = "lp"></app-productos-list>
+
