@@ -1,0 +1,23 @@
+<h1>CRUD facturas:</h1>
+<p>ID cliente: <input type="number" [(ngModel)]="idCliente"></p>
+<p>Total factura: <input type="number" [(ngModel)]="total"></p>
+<p>IVA: <input type="number" [(ngModel)]="iva"></p>
+<button (click)="addFactura()">Añadir factura</button>
+<p>ID factura a tratar: <input type="number" [(ngModel)]="idFactura"></p>
+<button (click)="deleteFactura()">Borrar factura</button>
+<button (click)="updateFactura()">Modificar factura</button>
+<br><br>
+<table id="tablita">
+    <tr>
+        <th>ID factura</th>
+        <th>ID cliente</th>
+        <th>Total</th>
+        <th>Iva</th>
+    </tr>
+    <tr *ngFor="let f of mostrarFacturas()">
+        <td>{{f.idFactura}}</td>
+        <td>{{f.idCliente}}</td>
+        <td>{{f.total}}</td>
+        <td>{{f.iva}}</td>
+    </tr>
+</table>
