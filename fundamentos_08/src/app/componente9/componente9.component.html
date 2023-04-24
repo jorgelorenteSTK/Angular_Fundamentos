@@ -1,0 +1,4 @@
+<h1>Enviar varios parámetros:</h1>
+<p>Id a enviar: <input type="number" [(ngModel)]="id"></p>
+<p>Acción a enviar: <input type="text" [(ngModel)]="accion"></p>
+<button routerLink="/10" [queryParams]="{id: id, accion: accion}" >Enviar</button>

@@ -1,0 +1,27 @@
+<h1>Directivas:</h1>
+<br>
+<h3>*ngIf</h3>
+<div *ngIf="logged; else off">
+    <p>Estás logeado.</p>
+    <button (click)="logOut()">Cerrar sesión</button>
+</div>
+
+<ng-template #off>
+    <p>Estás deslogeado</p>
+    <button (click)="logIn()">Iniciar sesión</button>
+</ng-template>
+
+<br>
+<h3>*ngFor</h3>
+<select [(ngModel)]="mes">
+    <option *ngFor="let m of meses" [value]="m">{{m}}</option>
+</select>
+
+<br><br>
+<h3>*ngSwitch</h3>
+<div [ngSwitch]="comida">
+    <p *ngSwitchCase="'macarrones'"> Tu comida favorita son los macarrones.</p>
+    <p *ngSwitchCase="'chocolate'"> Tu comida favorita es el chocolate.</p>
+    <p *ngSwitchCase="'patatas'"> Tu comida favorita son las patatas fritas.</p>
+    <p *ngSwitchDefault> No sabes cuál es tu comida favorita.</p>
+</div>
