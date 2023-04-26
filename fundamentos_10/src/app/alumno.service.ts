@@ -9,29 +9,10 @@ export class AlumnoService {
   la: Alumno[];
 
   constructor() { 
-    let a1: Alumno = {
-      id: 1,
-      dni: '12345678A',
-      nombre: 'Pepe',
-      horas: 10
-    }
-
-    let a2: Alumno = {
-      id: 2,
-      dni: '87654321B',
-      nombre: 'Paco',
-      horas: 20
-    }
-
-    let a3: Alumno = {
-      id: 3,
-      dni: '11111111C',
-      nombre: 'Juan',
-      horas: 30
-    }
-    
     this.la = [
-      a1, a2, a3
+      { id: 2, dni: '12345678A', nombre: 'Pepe', horas: 10 },
+      { id: 2, dni: '87654321B', nombre: 'Paco', horas: 20 },
+      { id: 3, dni: '11111111C', nombre: 'Juan', horas: 30 }
     ]
   }
 
