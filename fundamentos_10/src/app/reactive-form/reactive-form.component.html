@@ -1,4 +1,4 @@
-<form #reactForm="ngForm" [formGroup]="form" (submit)="send()">
+<form #reactForm="ngForm" [formGroup]="form" (ngSubmit)="send()">
     <h1>Formulario reactivo:</h1>
     <p>ID: <input type="number" formControlName="id" required></p>
     <p>DNI: <input type="text" formControlName="dni" required></p>
