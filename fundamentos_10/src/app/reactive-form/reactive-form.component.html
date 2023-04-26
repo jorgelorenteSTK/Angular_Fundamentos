@@ -1,0 +1,9 @@
+<form #reactForm="ngForm" [formGroup]="form" (submit)="send()">
+    <h1>Formulario reactivo:</h1>
+    <p>ID: <input type="number" formControlName="id" required></p>
+    <p>DNI: <input type="text" formControlName="dni" required></p>
+    <p>Nombre: <input type="text" formControlName="nombre" required></p>
+    <p>Horas: <input type="number" formControlName="horas" required></p>
+    <button type="submit" [disabled]="reactForm.invalid">Enviar</button>
+    <button type="button" (click)="return()">Cancelar</button>
+</form>

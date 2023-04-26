@@ -1,0 +1,20 @@
+<h1>Lista de alumnos:</h1>
+<table id="tablita">
+    <tr>
+        <th>ID</th>
+        <th>DNI</th>
+        <th>Nombre</th>
+        <th>Horas</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let a of listaAlumnos">
+        <td>{{a.id}}</td>
+        <td>{{a.dni}}</td>
+        <td>{{a.nombre}}</td>
+        <td>{{a.horas}}</td>
+        <td><button [routerLink]="['/update', a.id]">Modificar</button></td>
+    </tr>
+</table>
+<button [routerLink]="'add'">Alta</button>
+<br><br>
+<router-outlet></router-outlet>
