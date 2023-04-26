@@ -39,9 +39,7 @@ export class ReactiveFormComponent {
   }
 
   update(){
-    console.log(this.form.controls['id'])
     this.form.controls['id'].enable();
-    console.log("a")
     this.service.updateAlumno(this.form.value.id, this.form.value.dni, this.form.value.nombre, this.form.value.horas);
     this.return();
   }
