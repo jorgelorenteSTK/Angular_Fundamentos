@@ -1,0 +1,45 @@
+<form #reactForm="ngForm" [formGroup]="formPedido" (ngSubmit)="addPedido()">
+    <h1>Agregue su pedido:</h1>
+    <p>ID pedido: <input type="number" formControlName="idPedido" required readonly></p>
+    <p>ID cliente: <input type="number" formControlName="idCliente" required></p>
+    <p>Nombre cliente: <input type="text" formControlName="nombreCliente" required></p>
+    <p>Forma de pago: <input type="text" formControlName="formaPago" required></p>
+    <p>Dirección de entrega: <input type="text" formControlName="direccionEntrega" required></p>
+    <button type="button" [disabled]="reactForm.invalid" (click)="travelDetalles()">Agregar productos</button>
+    <router-outlet></router-outlet>
+    <br><br>
+    <button type="submit" [disabled]="reactForm.invalid">Enviar pedido</button>
+</form>
+
+<h3>Lista de pedidos:</h3>
+<table id="tablita">
+    <tr>
+        <th>ID Pedido</th>
+        <th>ID cliente</th>
+        <th>Nombre cliente</th>
+        <th>Forma de pago</th>
+        <th>Dirección de entrega</th>
+    </tr>
+    <tr *ngFor="let lp of pedidosService.showPedidos()">
+        <td>{{lp.idPedido}}</td>
+        <td>{{lp.idCliente}}</td>
+        <td>{{lp.nombreCliente}}</td>
+        <td>{{lp.formaPago}}</td>
+        <td>{{lp.direccionEntrega}}</td>
+    </tr>
+</table>
+
+<h3>Lista de productos:</h3>
+<table id="tablita">
+    <tr>
+        <th>ID Pedido</th>
+        <th>ID Producto</th>
+        <th>Cantidad</th>
+    </tr>
+    <tr *ngFor="let ld of pedidosService.showDetalles()">
+        <td>{{ld.idPedido}}</td>
+        <td>{{ld.idProducto}}</td>
+        <td>{{ld.cantidad}}</td>
+    </tr>
+</table>
+
