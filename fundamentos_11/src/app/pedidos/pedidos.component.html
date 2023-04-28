@@ -8,7 +8,7 @@
     <button type="button" [disabled]="reactForm.invalid" (click)="travelDetalles()">Agregar productos</button>
     <router-outlet></router-outlet>
     <br><br>
-    <button type="submit" [disabled]="reactForm.invalid">Enviar pedido</button>
+    <button type="submit" [disabled]="pedidosService.carrito.length == 0">Enviar pedido</button>
 </form>
 
 <h3>Lista de pedidos:</h3>
