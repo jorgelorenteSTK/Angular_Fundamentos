@@ -37,10 +37,9 @@ export class PedidosService {
   }
 
   addDetalle(){
-    for(let i=0; i<this.carrito.length; i++){
-      this.listaDetalles.push(this.carrito[i]);
-    }
-    this.carrito = [];
+    //En vez de usar un for, se puede emplear esta sintaxis para añadir a un array el contenido de otro.
+    this.listaDetalles.push(...this.carrito);  
+    this.carrito.splice(0, this.carrito.length);
   }
 
   showPedidos(){
