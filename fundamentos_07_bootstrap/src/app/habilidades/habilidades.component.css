@@ -1,0 +1,17 @@
+.row {
+    margin-top: 85px;
+    align-items: center;
+    width: 100%;
+}
+
+#tecnicas {
+    margin-left: 25%;
+}
+
+#suaves {
+    margin-right: 25%;
+}
+
+.list-group-item {
+    margin-top: 5px;
+}
